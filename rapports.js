@@ -25,7 +25,7 @@ function resoudreRapport(id) {
     if (confirm("Vous êtes sur que vous voulez resoudre ce rapport?")) {
         let rapport = rapports.find(r => r.id === id);
         rapport.status = "Resolu";
-        datatable.rapports = rapports;
+        datatable.reports = rapports;
         localStorage.setItem('appData', JSON.stringify(datatable));
         location.reload();
     }

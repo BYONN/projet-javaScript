@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,108 +11,109 @@
     <title>SpeedType</title>
 </head>
 
-<body>
 
-    <body class="bg-dark">
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <i class='bx  bxs-rocket' style="color: orange"></i> SpeedType</a>
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <i class='bx  bxs-rocket' style="color: orange"></i> SpeedType</a>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
 
-                    </ul>
-                    <ul class="navbar-nav me-right">
-                        <li class="nav-item d-flex align-items-center">
-                            <select class="form-select" id="langSelect">
-                                <option value="fr">Français</option>
-                                <option value="en">English</option>
-                                <option value="ar">عربية</option>
-                            </select>
-                        </li>
-                        <li class="nav-item">
-                            <strong><span class="nav-link" id="usernamecourant">Utilisateur</span></strong>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-outline-danger" data-i18n="deconnect" onclick="deconnecter()">Deconnexion</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="d-flex flex-nowrap">
-            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary p-3"
-                style="width: 220px; height: 100vh; position: sticky; top: 0">
-                <ul class="nav nav-pills flex-column mb-auto">
+                </ul>
+                <ul class="navbar-nav me-right">
+                    <li class="nav-item d-flex align-items-center">
+                        <select class="form-select" id="langSelect">
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                            <option value="ar">عربية</option>
+                        </select>
+                    </li>
                     <li class="nav-item">
-                        <a href="dashboard.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
-                            <i class='bx-sm bxs-tachometer'></i> <span data-i18n="dashboard">Dashboard</span>
-                        </a>
-                        <a href="users.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
-                            <i class='bx-sm bxs-user'></i> <span data-i18n="navusers">Utilisateurs</span>
-                        </a>
-
-                        <a href="texts.html"
-                            class="nav-link active text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
-                            <i class='bx-sm  bxs-file-detail'></i> <span data-i18n="navtexts">Texts</span>
-                        </a>
-
-                        <a href="scores.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2">
-                            <i class='bx-sm bxs-trophy'></i> <span data-i18n="navscores">Scores</span>
-                        </a>
-
-                        <a href="rapports.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
-                            <i class='bx-sm bxs-alert-triangle'></i> <span data-i18n="navreports">Rapports</span>
-                        </a>
-
-                        <a href="rapportform.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2"
-                            id="user-only">
-                            <i class='bx-sm bxs-edit'></i> <span data-i18n="navsubmitreport">Saisir un rapport</span>
-                        </a>
-
-                        <a href="badges.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2">
-                            <i class='bx-sm bxs-medal-star-alt'></i> <span data-i18n="navbadges">Badges</span>
-                        </a>
-
-                        <hr>
-                        <a href="jeu.html" class="btn btn-primary d-flex justify-content-center px-3 py-2">
-                            <i class='bx-sm bxs-joystick'></i> <span data-i18n="btnplay">Jouer</span>
-                        </a>
+                        <strong><span class="nav-link" id="usernamecourant">Utilisateur</span></strong>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-danger" data-i18n="deconnect"
+                            onclick="deconnecter()">Deconnexion</button>
                     </li>
                 </ul>
             </div>
-                <div class="w-100 p-4 d-flex flex-column align-items-start" id="page">
-                    <h1 class="mb-4 text-white" data-i18n="textsTitle">Texts</h1>
+        </div>
+    </nav>
 
-                    <button class="btn btn-success" onclick="ajouterTexteFormulaire()"> <i
-                            class='bx-fw bxs-book-add'></i><span data-i18n="btnAddText">Ajouter un text</span></button> <br>
-                    <div class="table-responsive w-100">
-                        <table class="table table-striped-columns table-dark">
-                            <thead>
-                                <tr>
-                                    <th scope="col" data-i18n="id">ID</th>
-                                    <th scope="col" data-i18n="content">Contenu</th>
-                                    <th scope="col" data-i18n="language">Langue</th>
-                                    <th scope="col" data-i18n="difficulty">Difficulté</th>
-                                    <th scope="col" data-i18n="category">Catégorie</th>
-                                    <th scope="col" data-i18n="actions">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody id="texts-table">
-                            </tbody>
-                        </table>
-                    </div>
-        </main>
-        <script src="data.js"></script>
-        <script src="texts.js"></script>
-        <script src="lang.js"></script>
-        <script src="deconnexion.js"></script>
-    </body>
+    <main class="d-flex flex-nowrap">
+        <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary p-3"
+            style="width: 220px; height: 100vh; position: sticky; top: 0">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="dashboard.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
+                        <i class='bx-sm bxs-tachometer'></i> <span data-i18n="dashboard">Dashboard</span>
+                    </a>
+                    <a href="users.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
+                        <i class='bx-sm bxs-user'></i> <span data-i18n="navusers">Utilisateurs</span>
+                    </a>
+
+                    <a href="texts.html"
+                        class="nav-link active text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
+                        <i class='bx-sm  bxs-file-detail'></i> <span data-i18n="navtexts">Texts</span>
+                    </a>
+
+                    <a href="scores.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2">
+                        <i class='bx-sm bxs-trophy'></i> <span data-i18n="navscores">Scores</span>
+                    </a>
+
+                    <a href="rapports.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
+                        <i class='bx-sm bxs-alert-triangle'></i> <span data-i18n="navreports">Rapports</span>
+                    </a>
+
+                    <a href="rapportform.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2"
+                        id="user-only">
+                        <i class='bx-sm bxs-edit'></i> <span data-i18n="navsubmitreport">Saisir un rapport</span>
+                    </a>
+
+                    <a href="badges.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2">
+                        <i class='bx-sm bxs-medal-star-alt'></i> <span data-i18n="navbadges">Badges</span>
+                    </a>
+
+                    <hr>
+                    <a href="jeu.html" class="btn btn-primary d-flex justify-content-center px-3 py-2">
+                        <i class='bx-sm bxs-joystick'></i> <span data-i18n="btnplay">Jouer</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-100 p-4 d-flex flex-column align-items-start" id="page">
+            <h1 class="mb-4 text-white" data-i18n="textsTitle">Texts</h1>
+
+            <button class="btn btn-success" onclick="ajouterTexteFormulaire()"> <i class='bx-fw bxs-book-add'></i><span
+                    data-i18n="btnAddText">Ajouter un text</span></button> <br>
+            <div class="table-responsive w-100">
+                <table class="table table-striped-columns table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-i18n="id">ID</th>
+                            <th scope="col" data-i18n="content">Contenu</th>
+                            <th scope="col" data-i18n="language">Langue</th>
+                            <th scope="col" data-i18n="difficulty">Difficulté</th>
+                            <th scope="col" data-i18n="category">Catégorie</th>
+                            <th scope="col" data-i18n="actions">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="texts-table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="data.js"></script>
+    <script src="texts.js"></script>
+    <script src="lang.js"></script>
+    <script src="deconnexion.js"></script>
+</body>
 
 </html>

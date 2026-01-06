@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,54 +11,59 @@
     <title>SpeedType</title>
 </head>
 
-<body>
 
-    <body class="bg-dark">
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="dashboard.html"> <i class='bx  bxs-rocket' style="color: orange"></i> SpeedType</a>
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
 
-                    </ul>
-                    <ul class="navbar-nav me-right">
-                        <li class="nav-item d-flex align-items-center">
-                            <select class="form-select" id="langSelect">
-                                <option value="fr">Français</option>
-                                <option value="en">English</option>
-                                <option value="ar">عربية</option>
-                            </select>
-                        </li>
-                        <li class="nav-item">
-                            <strong><span class="nav-link" id="usernamecourant">Utilisateur</span></strong>
-                        </li>
-                        <li class="nav-item">
-                             <button class="btn btn-outline-danger" onclick="deconnecter()">Deconnexion</button>
-                        </li>
-                    </ul>
-                </div>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="dashboard.html"> <i class='bx  bxs-rocket' style="color: orange"></i>
+                SpeedType</a>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+
+                </ul>
+                <ul class="navbar-nav me-right">
+                    <li class="nav-item d-flex align-items-center">
+                        <select class="form-select" id="langSelect">
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                            <option value="ar">عربية</option>
+                        </select>
+                    </li>
+                    <li class="nav-item">
+                        <strong><span class="nav-link" id="usernamecourant">Utilisateur</span></strong>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-danger" onclick="deconnecter()">Deconnexion</button>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="d-flex flex-nowrap justify-content-center">
-              <div class="w-75 p-4 m-5 d-flex flex-column align-items-start bg-light align-items-center rounded-3" style="height: 80vh">
-                <h1 class="display-5"><i class="bx bxs-flag-chequered"></i><span data-i18n="gameTitle"></span></h1>
-                <div id="timer" class="w-100">
-                    <h3 class="mt-4"><span data-i18n="timeLabel"></span>: <span id="timersecondes">0</span>s</h3>
-                </div>
-                <div id="phraseContainer" class="border rounded p-3 my-4" style="height: 100px; overflow-y: auto; background-color: #f8f9fa; width: 100%;">
-                    <p id="phraseToType" class="fs-4">Bla bla bla bla</p>
-                </div>
+    <main class="d-flex flex-nowrap justify-content-center">
+        <div class="w-75 p-4 m-5 d-flex flex-column align-items-start bg-light align-items-center rounded-3"
+            style="height: 80vh">
+            <h1 class="display-5"><i class="bx bxs-flag-chequered"></i><span data-i18n="gameTitle">Prét a jouer?</span></h1>
+            <div id="timer" class="w-100">
+                <span class="mt-4 fs-3"><span data-i18n="timeLabel"></span>: <span id="timersecondes">0</span>s</span>
+            </div>
+            <div id="phraseContainer" class="border rounded p-3 my-4"
+                style="height: 100px; overflow-y: auto; background-color: #f8f9fa; width: 100%;">
+                <p id="phraseToType" class="fs-4"> </p>
+            </div>
 
-                <textarea name="messageinput" id="messageinput" class="form-control mb-3" rows="3" placeholder="Appuyez sur le bouton puis ecrire le message!" disabled style="resize: none"></textarea>
-                <button class="btn btn-primary btn-lg mt-4" id="startGameBtn" onclick="commencerJeu()" data-i18n="startGame">Commencer le jeu</button>
-              </div>
-        </main>
+            <textarea name="messageinput" id="messageinput" class="form-control mb-3" rows="3"
+                placeholder="Appuyez sur le bouton puis ecrire le message!" disabled style="resize: none"></textarea>
+            <button class="btn btn-primary btn-lg mt-4" id="startGameBtn" onclick="commencerJeu()"
+                data-i18n="startGame">Commencer le jeu</button>
+        </div>
+    </main>
 
-        <script src="data.js"></script>
-        <script src="jeu.js"></script>
-        <script src="deconnexion.js"></script>
-        <script src="lang.js"></script>
-    </body>
+    <script src="data.js"></script>
+    <script src="jeu.js"></script>
+    <script src="deconnexion.js"></script>
+    <script src="lang.js"></script>
+</body>
 
 </html>

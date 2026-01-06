@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,165 +12,166 @@
     <title>SpeedType</title>
 </head>
 
-<body>
 
-    <body class="bg-dark">
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <i class='bx  bxs-rocket' style="color: orange"></i> SpeedType</a>
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
 
-                    </ul>
-                    <ul class="navbar-nav me-right">
-                        <li class="nav-item d-flex align-items-center">
-                            <select class="form-select" id="langSelect">
-                                <option value="fr">Français</option>
-                                <option value="en">English</option>
-                                <option value="ar">عربية</option>
-                            </select>
-                        </li>
-                        <li class="nav-item">
-                            <strong><span class="nav-link" id="usernamecourant">Utilisateur</span></strong>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-outline-danger" data-i18n="deconnect" onclick="deconnecter()">Deconnexion</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <i class='bx  bxs-rocket' style="color: orange"></i> SpeedType</a>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
 
-        <main class="d-flex flex-nowrap">
-            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary p-3"
-                style="width: 220px; height: 100vh; position: sticky; top: 0">
-                <ul class="nav nav-pills flex-column mb-auto">
+                </ul>
+                <ul class="navbar-nav me-right">
+                    <li class="nav-item d-flex align-items-center">
+                        <select class="form-select" id="langSelect">
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                            <option value="ar">عربية</option>
+                        </select>
+                    </li>
                     <li class="nav-item">
-                        <a href="dashboard.html"
-                            class="nav-link active text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
-                            <i class='bx-sm bxs-tachometer'></i> <span data-i18n="dashboard">Dashboard</span>
-                        </a>
-                        <a href="users.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
-                            <i class='bx-sm bxs-user'></i> <span data-i18n="navusers">Utilisateurs</span>
-                        </a>
-
-                        <a href="texts.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
-                            <i class='bx-sm  bxs-file-detail'></i> <span data-i18n="navtexts">Texts</span>
-                        </a>
-
-                        <a href="scores.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2">
-                            <i class='bx-sm bxs-trophy'></i> <span data-i18n="navscores">Scores</span>
-                        </a>
-
-                        <a href="rapports.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
-                            <i class='bx-sm bxs-alert-triangle'></i> <span data-i18n="navreports">Rapports</span>
-                        </a>
-
-                        <a href="rapportform.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2"
-                            id="user-only">
-                            <i class='bx-sm bxs-edit'></i> <span data-i18n="navsubmitreport">Saisir un rapport</span>
-                        </a>
-
-                        <a href="badges.html"
-                            class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2">
-                            <i class='bx-sm bxs-medal-star-alt'></i> <span data-i18n="navbadges">Badges</span>
-                        </a>
-
-                        <hr>
-                        <a href="jeu.html" class="btn btn-primary d-flex justify-content-center px-3 py-2">
-                            <i class='bx-sm bxs-joystick'></i> <span data-i18n="btnplay">Jouer</span>
-                        </a>
+                        <strong><span class="nav-link" id="usernamecourant">Utilisateur</span></strong>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-danger" data-i18n="deconnect"
+                            onclick="deconnecter()">Deconnexion</button>
                     </li>
                 </ul>
             </div>
+        </div>
+    </nav>
 
-            <div class="w-100 p-4">
-                <h1 class="mb-4 text-white" data-i18n="dashboard">Tableau de bord</h1>
-                <div class="w-100 d-flex justify-content-center gap-2">
-                    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                        <div class="card-header" data-i18n="numusertotal" >Nombre d'utilisateurs totales</div>
-                        <div class="card-body">
-                            <h4 class="card-title text-center" id="numusers">5</h4>
-                        </div>
-                    </div>
+    <main class="d-flex flex-nowrap">
+        <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary p-3"
+            style="width: 220px; height: 100vh; position: sticky; top: 0">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="dashboard.html"
+                        class="nav-link active text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
+                        <i class='bx-sm bxs-tachometer'></i> <span data-i18n="dashboard">Dashboard</span>
+                    </a>
+                    <a href="users.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
+                        <i class='bx-sm bxs-user'></i> <span data-i18n="navusers">Utilisateurs</span>
+                    </a>
 
-                    <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
-                        <div class="card-header" data-i18n="numtexttotal" >Nombre du texts totales</div>
-                        <div class="card-body">
-                            <h4 class="card-title text-center" id="numtexts">5</h4>
-                        </div>
-                    </div>
+                    <a href="texts.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
+                        <i class='bx-sm  bxs-file-detail'></i> <span data-i18n="navtexts">Texts</span>
+                    </a>
 
-                    <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
-                        <div class="card-header" data-i18n="numjeux" >Nombre des parties jouées</div>
-                        <div class="card-body">
-                            <h4 class="card-title text-center" id="numjeux">5</h4>
-                        </div>
-                    </div>
+                    <a href="scores.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2">
+                        <i class='bx-sm bxs-trophy'></i> <span data-i18n="navscores">Scores</span>
+                    </a>
 
-                    <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
-                        <div class="card-header" data-i18n="numavgWPM" >Moyenne MPM</div>
-                        <div class="card-body">
-                            <h4 class="card-title text-center" id="numMPM">5</h4>
-                        </div>
-                    </div>
+                    <a href="rapports.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2 restricted">
+                        <i class='bx-sm bxs-alert-triangle'></i> <span data-i18n="navreports">Rapports</span>
+                    </a>
 
-                    <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
-                        <div class="card-header" data-i18n="numavgacc" >Moyenne precision</div>
-                        <div class="card-body">
-                            <h4 class="card-title text-center" id="numprecision">5</h4>
-                        </div>
-                    </div>
+                    <a href="rapportform.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2"
+                        id="user-only">
+                        <i class='bx-sm bxs-edit'></i> <span data-i18n="navsubmitreport">Saisir un rapport</span>
+                    </a>
 
-                    <div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
-                        <div class="card-header" data-i18n="numreports" >Rapports non-resolu</div>
-                        <div class="card-body">
-                            <h4 class="card-title text-center" id="numrapports">5</h4>
-                        </div>
+                    <a href="badges.html"
+                        class="nav-link text-decoration-none d-flex align-items-center mb-3 mb-md-0 me-md-auto px-3 py-2">
+                        <i class='bx-sm bxs-medal-star-alt'></i> <span data-i18n="navbadges">Badges</span>
+                    </a>
+
+                    <hr>
+                    <a href="jeu.html" class="btn btn-primary d-flex justify-content-center px-3 py-2">
+                        <i class='bx-sm bxs-joystick'></i> <span data-i18n="btnplay">Jouer</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-100 p-4">
+            <h1 class="mb-4 text-white" data-i18n="dashboard">Tableau de bord</h1>
+            <div class="w-100 d-flex justify-content-center gap-2">
+                <div class="card text-white bg-primary mb-3 align-items-center" style="max-width: 20rem;">
+                    <div class="card-header" data-i18n="numusertotal">Nombre d'utilisateurs totales</div>
+                    <div class="card-body">
+                        <span class="card-title text-center fs-4" id="numusers">5</span>
                     </div>
                 </div>
 
-                <div class="row g-4 container-sm gap-1" style="position: relative;">
-                    <div class="col-sm" style="position: relative;">
-                        <h2 class="mb-4 text-center text-white" data-i18n="textpays" >Pays des utilisateurs</h2>
-                        <canvas id="chartCountries"></canvas>
+                <div class="card text-white bg-info mb-3 align-items-center" style="max-width: 20rem;">
+                    <div class="card-header" data-i18n="numtexttotal">Nombre du texts totales</div>
+                    <div class="card-body">
+                        <span class="card-title text-center fs-4" id="numtexts">5</span>
                     </div>
+                </div>
 
-
-                    <div class="col-sm" style="position: relative;">
-                        <h2 class="mb-4 text-center text-white" data-i18n="textlangs" >Langages des texts</h2>
-                        <canvas id="chartLangages"></canvas>
+                <div class="card text-white bg-info mb-3 align-items-center" style="max-width: 20rem;">
+                    <div class="card-header" data-i18n="numjeux">Nombre des parties jouées</div>
+                    <div class="card-body">
+                        <span class="card-title text-center fs-4" id="numjeux">5</span>
                     </div>
+                </div>
 
-                    <div class="col-sm" style="position: relative;">
-                        <h2 class="mb-4 text-center text-white" data-i18n="textreports" >Statut des rapports</h2>
-                        <canvas id="chartRapports"></canvas>
+                <div class="card text-white bg-info mb-3 align-items-center" style="max-width: 20rem;">
+                    <div class="card-header" data-i18n="numavgWPM">Moyenne MPM</div>
+                    <div class="card-body">
+                        <span class="card-title text-center fs-4" id="numMPM">5</span>
                     </div>
+                </div>
 
-                    <div class="col-sm" style="position: relative;">
-                        <h2 class="mb-4 text-center text-white" data-i18n="textscores" >Top 5 scores</h2>
-                        <canvas id="chartScores"></canvas>
+                <div class="card text-white bg-info mb-3 align-items-center" style="max-width: 20rem;">
+                    <div class="card-header" data-i18n="numavgacc">Moyenne precision</div>
+                    <div class="card-body">
+                        <span class="card-title text-center fs-4" id="numprecision">5</span>
                     </div>
+                </div>
 
-                    <div class="col-sm" style="position: relative;">
-                        <h2 class="mb-4 text-center text-white" data-i18n="textgames" >Parties jouées depuis 7 jours</h2>
-                        <canvas id="chartJeux"></canvas>
+                <div class="card text-white bg-warning mb-3 align-items-center" style="max-width: 20rem;">
+                    <div class="card-header" data-i18n="numreports">Rapports non-resolu</div>
+                    <div class="card-body">
+                        <span class="card-title text-center fs-4" id="numrapports">5</span>
                     </div>
-
                 </div>
             </div>
 
+            <div class="row g-4 container-sm gap-1" style="position: relative;">
+                <div class="col-sm" style="position: relative;">
+                    <h2 class="mb-4 text-center text-white" data-i18n="textpays">Pays des utilisateurs</h2>
+                    <canvas id="chartCountries"></canvas>
+                </div>
 
-        </main>
-        <script src="data.js"></script>
-        <script src="dashboard.js"></script>
-        <script src="lang.js"></script>
-        <script src="deconnexion.js"></script>
-    </body>
+
+                <div class="col-sm" style="position: relative;">
+                    <h2 class="mb-4 text-center text-white" data-i18n="textlangs">Langages des texts</h2>
+                    <canvas id="chartLangages"></canvas>
+                </div>
+
+                <div class="col-sm" style="position: relative;">
+                    <h2 class="mb-4 text-center text-white" data-i18n="textreports">Statut des rapports</h2>
+                    <canvas id="chartRapports"></canvas>
+                </div>
+
+                <div class="col-sm" style="position: relative;">
+                    <h2 class="mb-4 text-center text-white" data-i18n="textscores">Top 5 scores</h2>
+                    <canvas id="chartScores"></canvas>
+                </div>
+
+                <div class="col-sm" style="position: relative;">
+                    <h2 class="mb-4 text-center text-white" data-i18n="textgames">Parties jouées depuis 7 jours</h2>
+                    <canvas id="chartJeux"></canvas>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+    <script src="data.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="lang.js"></script>
+    <script src="deconnexion.js"></script>
+</body>
 
 </html>

@@ -25,7 +25,7 @@ if (currentuser.role != "Admin") {
 let usernameDisplay = document.getElementById("usernamecourant");
 
 
-usernameDisplay.innerText = currentuser.username
+usernameDisplay.innerText = currentuser.username;
 
 document.getElementById("numusers").innerHTML = users.length;
 document.getElementById("numtexts").innerHTML = texts.length;
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     users.forEach(user => {
 
-        if (!Object.values(pays).some(country => country == user.nationality)) {
+        if (!Object.keys(pays).some(country => country == user.nationality)) {
             pays[user.nationality] = 1;
         } else {
             pays[user.nationality] += 1;
